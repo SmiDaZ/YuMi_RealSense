@@ -42,7 +42,6 @@ class MyTCPHandler(StreamRequestHandler):
                 elif self.c[7] == "Ok":
                     print("Reset Home")
                     y.reset_home()
-            print ('client send: '+ str(self.c))
             y.right.goto_pose_delta((float(self.c[0]), float(self.c[1]), float(self.c[2])))
             y.left.goto_pose_delta((float(self.c[3]), float(self.c[4]), float(self.c[5])))
             
